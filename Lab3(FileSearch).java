@@ -1,4 +1,4 @@
-//java -cp . jvp.FileCode sample.txt java
+//java -cp . package.FileCode sample.txt java
 package jvp;
 
 import java.io.*;
