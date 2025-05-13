@@ -1,0 +1,29 @@
+package com.spring.jdbc;
+import java.sql.*;
+class DBTask extends Thread {
+    public void run() {
+        String url = "jdbc:mysql://localhost:3306/scm2"; // replace your_database
+        String user = "root"; // replace with your DB username
+        String pass = "Priyanka@05"; // replace with your DB password
+        try {
+        	 Connection con = DriverManager.getConnection(url, user, pass);
+             Statement st = con.createStatement();
+             ResultSet rs = st.executeQuery("SELECT * FROM users");
+            System.out.println("ID\tName");
+            while (rs.next()) {
+                String email = rs.getString("email");
+                System.out.println(email );
+            }
+        } catch (SQLException e) {
+            System.out.println("Database Error: " + e.getMessage());
+        }
+    }
+}
+public class app {
+    public static void main(String[] args) {
+        DBTask task = new DBTask(); // Creating thread
+        task.start();          
+        DBTask task2 = new DBTask(); // Creating thread
+        task2.start();         
+    }
+}
