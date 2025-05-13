@@ -1,20 +1,11 @@
-def groupAndSortOwners(files):
-    result = {}
-    for file, owner in files.items():
-        result.setdefault(owner, []).append(file)
-    
-    for owner in result:
-        result[owner].sort()
-    
-    return result
+def groupAndSort(files):
+    res={}
+    for file,owner in files.items():
+        res.setdefault(owner,[]).append(file);
+    for owner in res:
+        res[owner].sort()
+    return res
 
-# Example usage:
-files = {
-    'Input.txt': 'Albert',
-    'Code.py': 'Stanley',
-    'Output.txt': 'Albert',
-    'btech.txt': 'Albert'
-}
-
-output = groupAndSortOwners(files)
+input={"Hii.txt":"Jay","Hello.txt":"Jay","bye.txt":"Sharad"}
+output=groupAndSort(input)
 print(output)
