@@ -1,11 +1,6 @@
-//javac NotificationService.java
-//java NotificationService 2
-//or
-//java -cp . jvp.NotificationService 2
-//javac -d . *.java
-package jvp;
+//javac NotificationService.java or //javac -d . *.java
+//java -cp . package.NotificationService 2
 import java.util.*;
-
 public class NotificationService implements NotificationServices{
 	private final NotificationDAO storage;
 	NotificationService(NotificationDAO storage) {
@@ -26,10 +21,8 @@ public class NotificationService implements NotificationServices{
 	
 	public static void main(String[] args) {
 		  int count = Integer.parseInt(args[0]);
-
 		  NotificationServices service = new NotificationService(new MapNotificationDAO());
 		  Scanner sc = new Scanner(System.in);
-
 		  for (int i = 0; i < count; i++) {
 		      System.out.println("Enter the message:");
 		      String message = sc.nextLine(); // Allows full sentence
