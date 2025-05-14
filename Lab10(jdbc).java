@@ -9,7 +9,6 @@ class DBTask extends Thread {
         	 Connection con = DriverManager.getConnection(url, user, pass);
              Statement st = con.createStatement();
              ResultSet rs = st.executeQuery("SELECT * FROM users");
-            System.out.println("ID\tName");
             while (rs.next()) {
                 String email = rs.getString("email");
                 System.out.println(email );
