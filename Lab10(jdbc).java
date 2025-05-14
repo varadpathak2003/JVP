@@ -1,4 +1,6 @@
 //javac -cp ".;lib/mysql-connector-j-8.x.x.jar" DBTask.java
+//create table users (id int primary key,email varchar(50);
+//insert into users value (1,"abc@123.com");
 
 package com.spring.jdbc;
 import java.sql.*;
