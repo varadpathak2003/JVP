@@ -1,4 +1,9 @@
 //javac -cp ".;lib/mysql-connector-j-8.x.x.jar" DBTask.java
+//sudo apt install mysql-server
+//sudo systemctl start mysql
+// sudo mysql
+//mysql -u your_username -p
+
 //create table users (id int primary key,email varchar(50);
 //insert into users value (1,"abc@123.com");
 
