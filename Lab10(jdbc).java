@@ -1,10 +1,12 @@
+//javac -cp ".;lib/mysql-connector-j-8.x.x.jar" DBTask.java
+
 package com.spring.jdbc;
 import java.sql.*;
 class DBTask extends Thread {
     public void run() {
         String url = "jdbc:mysql://localhost:3306/scm2"; // replace your_database
         String user = "root"; // replace with your DB username
-        String pass = "Priyanka@05"; // replace with your DB password
+        String pass = ""; // replace with your DB password
         try {
         	 Connection con = DriverManager.getConnection(url, user, pass);
              Statement st = con.createStatement();
